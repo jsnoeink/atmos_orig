@@ -1,5 +1,5 @@
 1098.0    = G, Gravity - ProxCenb = 1098.0, Earth=980.7, Mars=373.0
-1.00     = FSCALE, Solar Flux Scaling - Earth=1.0, Mars=0.43
+0.65     = FSCALE, Solar Flux Scaling - Earth=1.0, Mars=0.43
 0.250    = ALB, Surface Albedo - Earth=0.25, Mars=0.215
 1.1E6    = ZTROP, Height of the tropopause - typically Earth=11km, Mars=15km
 0.01     = FAR       Ar partial pressure on modern Earth  = ? for Mars
