@@ -1,0 +1,94 @@
+REACTANTS           PRODUCTS                      REACTYPE  A(0)        A(inf)     N(0)  N(inf)! Comments/Citations
+H2O       O1D       OH        OH                  2BODY     1.63E-10    60.                    ! JPL-15
+H2        O1D       OH        H                   2BODY     1.2E-10     0.                     ! JPL-15
+H2        O         OH        H                   WEIRD     6.34E-12*exp(-4000/T(i)) + 1.46e-9*exp(-9650/T(i)) ! NIST 2005
+H2        OH        H2O       H                   2BODY     2.8E-12     -1800.                 ! JPL-15
+H         O3        OH        O2                  2BODY     1.4E-10     -470.                  ! JPL-15
+H         O2        HO2                           3BODY     4.4D-32     7.5D-11    1.3D0 -0.2  ! JPL-15  (see also H+SO+M->HSO+M)
+H         HO2       H2        O2                  2BODY     6.90E-12    0.                     ! JPL-15
+H         HO2       H2O       O                   2BODY     1.60E-12    0.                     ! JPL-15
+H         HO2       OH        OH                  2BODY     7.20E-11    0.                     ! JPL-15
+OH        O         H         O2                  2BODY     1.8E-11     180.                   ! JPL-15
+OH        HO2       H2O       O2                  2BODY     4.8E-11     250.                   ! JPL-15
+OH        O3        HO2       O2                  2BODY     1.7E-12     -940.                  ! JPL-15
+HO2       O         OH        O2                  2BODY     3.0E-11     200.                   ! JPL-15
+HO2       O3        OH        O2        O2        2BODY     1.0E-14     -490.      0.                              ! JPL-02
+HO2       HO2       H2O2      O2                  WEIRD     3.0E-13*EXP(460./T(I)) + 2.1E-33*EXP(920./T(I))*DEN(I) ! JPL-15
+H2O2      OH        HO2       H2O                 2BODY     2.9E-12     -160.      0.                              ! DeMore et al. [1992]
+O         O         O2                            WEIRD     9.46E-34    EXP(480./T(I))*DEN(I)                      ! NIST 05 low Temp in N2.
+O         O2        O3                            3BODY     6.0E-34     3.E-11     2.4E0 0.E0                      ! JPL-02
+O         O3        O2        O2                  2BODY     8.0E-12     -2060.                 ! JPL-15
+OH        OH        H2O       O                   2BODY     1.8E-12     0.                     ! JPL-15
+O1D       M         O         M                   2BODY     1.8E-11     110.       0.                              ! DeMore et al. [1992]
+O1D       O2        O         O2                  2BODY     3.3E-11     55.                    ! JPL-15
+O2        HV        O         O1D                 PHOTX     1.00
+O2        HV        O         O                   PHOTX     1.00
+H2O       HV        H         OH                  PHOTO
+H2O       HV        H2        O1D                 PHOTO
+H2O       HV        H         H         O         PHOTO
+O3        HV        O2        O1D                 PHOTX
+O3        HV        O2        O                   PHOTX                                        ! this line must follow O3+hv->O2+O1D
+O3        HV        O         O         O         PHOTX                                        ! this line must follow O3+hv->O2+O ! APL REQUIRES LGRID=2
+H2O2      HV        OH        OH                  PHOTX     1.00
+CO2       HV        CO        O                   PHOTO     1.00
+CO2       HV        CO        O1D                 PHOTO     1.00
+CO        OH        CO2       H                   WEIRD     1.5E-13     (1. + 0.  6*PATM)                          ! DeMore et al. [1992]
+CO        O         CO2                           WEIRD                                        ! Gao et al [2015]
+H         CO        HCO                           WEIRD                                        ! Using combination of reviews on NIST APL
+H         HCO       H2        CO                  2BODY     1.8E-10     0.         0.                              ! NIST 2005
+HCO       HCO       H2CO      CO                  2BODY     4.5E-11     0.         0.                              ! NIST 2005
+OH        HCO       H2O       CO                  2BODY     1.0E-10     0.         0.                              ! NIST 2005 - not too certain
+O         HCO       H         CO2                 2BODY     5.0E-11     0.         0.                              ! NIST 2005
+O         HCO       OH        CO                  2BODY     5.0E-11     0.         0.                              ! NIST 2005
+H2CO      HV        H2        CO                  PHOTO                                        
+H2CO      HV        HCO       H                   PHOTO                                       
+H2CO      H         H2        HCO                 WEIRD     2.14-12     -1090.     1.62                            ! NIST 2005 Baulch et al [1994]
+H         H         H2                            WEIRD     8.85E-33    (T(I)/29  8.)**-0.6*DEN(I)                 ! NIST 1992 (Baluch et al.) originally Baluch et al., 1976. Also, different than Mark's constant.
+HCO       O2        HO2       CO                  2BODY     5.2E-12     0.                     ! JPL-15
+H2CO      OH        H2O       HCO                 2BODY     5.5E-12     125.                   ! JPL-15
+H         OH        H2O                           WEIRD     6.1E-26     DEN(I)/T(I)/T(I)                         ! McEwan and Phillips [1975]
+OH        OH        H2O2                          3BODY     6.9D-31     2.6D-11    1.0   0.0   ! JPL-15
+H2CO      O         HCO       OH                  2BODY     3.4E-11     -1600.                 ! JPL-15
+H2O2      O         OH        HO2                 2BODY     1.4E-12     -2000.                 ! JPL-15
+HO2       HV        OH        O                   PHOTX     1.00
+CH4       HV        CH3       H                   PHOTO
+CH4       HV        CH21      H         H         PHOTO
+CH4       HV        CH21      H2                  PHOTO
+CH4       HV        CH23      H         H         PHOTO
+CH4       HV        CH        H2        H         PHOTO
+C2H6      HV        CH4       CH21                PHOTO
+C2H6      HV        C2H2      H2        H2        PHOTO
+C2H6      HV        C2H4      H         H         PHOTO
+C2H6      HV        C2H4      H2                  PHOTO
+C2H6      HV        CH3       CH3                 PHOTO
+CH4       OH        CH3       H2O                 2BODY     2.45E-12    -1775.                 ! JPL-15
+CH4       O1D       CH3       OH                  2BODY     1.3E-10     0.                     ! JPL-15 gives 75% for CH3+H2O, 20% for CH3O + H, 5% for H2CO + O2, against 1.5e-10
+CH4       O1D       H2CO      H2                  2BODY     8.75E-12    0.                     ! JPL-15 gives 75% for CH3+H2O, 20% for CH3O + H, 5% for H2CO + O2, against 1.5e-10
+CH21      CH4       CH3       CH3                 2BODY     7.14E-12    -5050.                 ! Bohland et al. [1985]
+CH21      O2        HCO       OH                  2BODY     3.E-11      0.                     ! Ashfold et al. [1981]
+CH21      M         CH23      M                   2BODY     8.8E-12     0.         0.                              ! Ashfold et al. [1981]
+CH23      H2        CH3       H                   2BODY     5.E-14      0.                     ! Updated Harman et al. [2015]
+CH23      CH4       CH3       CH3                 2BODY     7.1e-12     -5051.                 ! Updated Harman et al. [2015]
+CH23      O2        HCO       OH                  2BODY     4.1E-11     -750.                  ! NIST - products uncertain
+CH3       O2        H2CO      OH                  3BODY     4.5E-31     1.8E-12    3.0   1.7                       ! DeMore et al. [1992]
+CH3       OH        CH3O      H                   WEIRD     9.3E-11    -1606.      1                               ! Theory, Jasper et al. (2007)
+CH3       O         H2CO      H                   2BODY     1.1E-10     0.                     ! JPL-15
+CH3       O3        H2CO      HO2                 2BODY     5.4E-12     -220.      0.                              ! DeMore et al. [1992]
+CH3       CH3       C2H6                          WEIRD                                                            ! Wagner and Wordlaw [1988]
+CH3       HV        CH21      H                   PHOTO     1.00                               !
+CH3       H         CH4                           3BODY     1.0E-28     2.0E-10    1.80  0.40                      ! Check this against NIST database, need to convert to 3body. Using KZ temp.
+CH3       HCO       CH4       CO                  2BODY     4.4E-11     0.         0.                              ! Mulenko [1987]. Different than Mark's constant.
+CH3       H2CO      CH4       HCO                 WEIRD     1.60E-16    899.       6.10                            ! Baluch et al. [1994]. Check, I think this is different from Mark's rate.
+CH4       O         CH3       OH                  2BODY     5.8E-11     -4450.     0.                              ! Barassin and Combourie [1974]
+CH21      H2        CH3       H                   2BODY     5.E-15      0.         0.                              ! Upper limit, Tsang and Hampson [1986]. Different than Mark's constant.
+CH21      CO2       H2CO      CO                  2BODY     1.E-12      0.         0.                              ! Zahnle [1986]
+CH23      O         HCO       H                   2BODY     1.E-11      0.         0.                              ! Huebner and Giguere [1980]
+CH23      CO2       H2CO      CO                  2BODY     1.0E-14     0.         0.                              ! Laufer [1981]
+C2H6      OH        C2H5      H2O                 2BODY     7.66E-12    -1020.                 ! JPL-15
+C2H6      O         C2H5      OH                  WEIRD     8.54E-12    2920.      1.5                             ! Baluch et al. [1992]. Different than Mark's constant.
+C2H6      O1D       C2H5      OH                  2BODY     6.29E-10    0.         0.                              ! Matsumi et al. [1993]. Barely different than Mark's constant.
+C2H5      H         CH3       CH3                 2BODY     6.0E-11     0.         0.                              ! Baluch et al. [1992]
+C2H5      O         CH3       HCO       H         2BODY     1.1E-10     0.         0.                              ! Pavlov et al. [2001]
+C2H5      OH        CH3       HCO       H2        2BODY     4.0E-11     0.                                         ! NIST 2005, C2H4 + H2O  are the real products
+C2H5      HCO       C2H6      CO                  2BODY     1.E-10      0.                                         ! NIST quotes Hampson/Garvin at 2e-10. KZ slowed this a bit
+C2H5      O2        CH3       HCO       OH        3BODY     1.5E-28     1.9E-11    4.40  1.80                      ! DeMore et al. [1992]
